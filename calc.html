@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #teste {
+        margin: auto;
+        background-color: aliceblue;
+        height: 310px;
+        width: 180px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="teste">
+      <input type="text" name="" id="visor" />
+      <div id="teste">
+        <div class="btn" id="btn1">1</div>
+        <div class="btn" id="btn2">2</div>
+        <div class="btn">3</div>
+        <div class="btn">4</div>
+        <div class="btn">5</div>
+        <div class="btn">6</div>
+        <div class="btn">7</div>
+        <div class="btn">8</div>
+        <div class="btn" id="btn9">+</div>
+        <div class="btn" id="btn0">=</div>
+      </div>
+    </div>
+
+
+    <script>
+        let visor = document.getElementById("visor")
+let btn1 = document.getElementById('btn1')
+let btn2 = document.getElementById('btn2')
+let btn9 = document.getElementById('btn9');
+
+let c = [btn1,btn2,btn9]
+let resultado =0
+let calc = document.getElementById('btn0')
+calc.addEventListener("click", ()=>{visor.value = eval(resultado)})
+c.forEach(element => {
+  
+  element.addEventListener('click', (e)=>{visor.value = e.target.textContent,console.log(visor.value), resultado += visor.value})
+
+  });
+
+btn2.addEventListener('click', (e)=>{visor.value = e.target.textContent});
+    </script>
+  </body>
+</html>

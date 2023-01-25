@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Churrasco HT</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="panel">
+      <div>
+        <h1>Calculadora Churrasco <img id="churras" src="img/churrasco.png" alt=""></h1>
+        
+      </div>
+      <div class="campo">
+        <label for="criancas">Crianças</label>
+      <input type="number" id="criancas" placeholder="Quantidade de Crianças"/>
+    </div>
+    <div class="campo">
+      <label for="adultos">Adultos</label>
+      <input type="number" id="adultos" placeholder="Quantidade de Adultos"/>
+    </div>
+   
+    <div>
+        <label for="">Peso em gramas</label>
+        <input type="radio" name="medida" id="gramas" class="unidade" value="gramas" checked="checked">
+
+        <label for="">Peso em kilogramas</label>
+        <input type="radio" name="medida" id="kilogramas" class="unidade" value="kilogramas">
+    </div>
+    <div>
+      <input id="calc" class="botao" onclick="calcular()" type="button" value="Calcular" />
+    </div>
+    
+    <div>
+        <p id="resultado"></p>
+    </div>
+</div>
+
+    <script src="calculadoraChurrasco.js"></script>
+  </body>
+
+
+</html>
